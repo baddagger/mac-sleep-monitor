@@ -1,0 +1,129 @@
+name: Release DMG
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name for the release (e.g., v1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  build:
+    name: Build ${{ matrix.arch }}
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        arch: [arm64, x86_64]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+      
+    - name: Build DMG
+      id: build
+      run: |
+        ./Scripts/build-dmg.sh ${{ matrix.arch }}
+        
+        # Get Version Info
+        APP_PATH="build/Build/Products/Release/Mac Sleep Monitor.app"
+        VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$APP_PATH/Contents/Info.plist")
+        BUILD=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$APP_PATH/Contents/Info.plist")
+        
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "build=$BUILD" >> $GITHUB_OUTPUT
+        
+        DMG_FILE=$(ls MacSleepMonitor-*-${{ matrix.arch }}.dmg)
+        echo "dmg_file=$DMG_FILE" >> $GITHUB_OUTPUT
+        
+        # Save version info for release job
+        echo "VERSION=$VERSION" > version_info.txt
+        echo "BUILD=$BUILD" >> version_info.txt
+
+    - name: Upload DMG Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dmg-${{ matrix.arch }}
+        path: ${{ steps.build.outputs.dmg_file }}
+        if-no-files-found: error
+        
+    - name: Upload Version Info
+      uses: actions/upload-artifact@v4
+      with:
+        name: version-info-${{ matrix.arch }}
+        path: version_info.txt
+
+  release:
+    needs: build
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Download Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+        merge-multiple: true
+
+    - name: Determine Tag
+      id: tag
+      run: |
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          echo "tag_name=${{ github.event.inputs.tag_name }}" >> $GITHUB_OUTPUT
+        else
+          echo "tag_name=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Verify Artifacts & Get Version
+      id: info
+      run: |
+        ls -R artifacts
+        
+        # Read version info from one of the artifacts (e.g. arm64)
+        # We need to find where it was downloaded. 'merge-multiple: true' puts them all in artifacts/
+        # But wait, version_info.txt from both jobs might overwrite each other.
+        # Since they are identical (same commit), it's fine.
+        
+        if [ -f "artifacts/version_info.txt" ]; then
+            source "artifacts/version_info.txt"
+        elif [ -f "artifacts/version-info-arm64/version_info.txt" ]; then
+             source "artifacts/version-info-arm64/version_info.txt"
+        else
+            # Fallback if merge-multiple behavior varies or download path differs
+            # Try to find any version_info.txt
+            FILE=$(find artifacts -name "version_info.txt" | head -1)
+            if [ -n "$FILE" ]; then
+                source "$FILE"
+            else
+                echo "Error: Could not find version_info.txt"
+                exit 1
+            fi
+        fi
+        
+        echo "Detected VERSION: $VERSION"
+        echo "Detected BUILD: $BUILD"
+        
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "build=$BUILD" >> $GITHUB_OUTPUT
+
+    - name: Publish Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ steps.tag.outputs.tag_name }}
+        name: Mac Sleep Monitor ${{ steps.info.outputs.version }}
+        files: artifacts/*.dmg
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

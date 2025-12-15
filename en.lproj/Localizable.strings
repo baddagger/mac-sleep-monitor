@@ -1,0 +1,31 @@
+/* App Title */
+"app.title" = "Mac Sleep Records";
+
+/* Filter Options */
+"filter.days" = "Days";
+"filter.1day" = "1 Day";
+"filter.3days" = "3 Days";
+"filter.7days" = "7 Days";
+"filter.30days" = "30 Days";
+
+/* Buttons */
+"button.refresh" = "Refresh";
+
+/* Status Messages */
+"status.loading" = "Loading logs...";
+"status.no_records" = "No sleep records";
+
+/* Labels */
+"label.sleep_time" = "Sleep Time:";
+"label.duration" = "Duration:";
+
+/* Duration Formats */
+"duration.hours_minutes" = "%d hours %d minutes";
+"duration.minutes_seconds" = "%d minutes %d seconds";
+"duration.seconds" = "%d seconds";
+
+/* Total Sleep Time */
+"total.sleep_time" = "Total: %d hours %d minutes";
+
+/* Reason */
+"reason.unknown" = "Unknown";

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+PROJECT_NAME="Mac Sleep Monitor"
+SCHEME_NAME="Mac Sleep Monitor"
+ARCH=${1:-$(uname -m)}
+BUILD_DIR="build"
+
+echo "🔨 Building $PROJECT_NAME for $ARCH..."
+xcodebuild clean build \
+  -project "$PROJECT_NAME.xcodeproj" \
+  -scheme "$SCHEME_NAME" \
+  -destination 'platform=macOS' \
+  ARCHS="$ARCH" \
+  -configuration Release \
+  -derivedDataPath "$BUILD_DIR"
+
+APP_PATH="$BUILD_DIR/Build/Products/Release/$PROJECT_NAME.app"
+
+if [ ! -d "$APP_PATH" ]; then
+  echo "❌ Build failed: App not found at $APP_PATH"
+  exit 1
+fi
+
+# Extract version from built app
+VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$APP_PATH/Contents/Info.plist")
+DMG_NAME="MacSleepMonitor-${VERSION}-${ARCH}.dmg"
+
+echo "📦 Creating DMG..."
+rm -rf dmg_temp
+mkdir -p dmg_temp
+cp -R "$APP_PATH" dmg_temp/
+ln -s /Applications dmg_temp/Applications
+
+rm -f "$DMG_NAME"
+hdiutil create -volname "$PROJECT_NAME" \
+  -srcfolder dmg_temp \
+  -ov -format UDZO \
+  "$DMG_NAME"
+
+rm -rf dmg_temp
+
+echo "✅ DMG created: $DMG_NAME"

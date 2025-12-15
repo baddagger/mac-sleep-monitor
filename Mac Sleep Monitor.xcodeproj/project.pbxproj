@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F8CDBF62EB23F4100923C2F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CDBF42EB23F4100923C2F /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F5098E32EB1E85C00888491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F5098CC2EB1E85B00888491 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F5098D32EB1E85B00888491;
+			remoteInfo = "Mac Sleep Monitor";
+		};
+		1F5098ED2EB1E85C00888491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F5098CC2EB1E85B00888491 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F5098D32EB1E85B00888491;
+			remoteInfo = "Mac Sleep Monitor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F5098D42EB1E85B00888491 /* Mac Sleep Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mac Sleep Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5098E22EB1E85C00888491 /* Mac Sleep MonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac Sleep MonitorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5098EC2EB1E85C00888491 /* Mac Sleep MonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mac Sleep MonitorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8CDBF52EB23F4100923C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1F5098D62EB1E85B00888491 /* Mac Sleep Monitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mac Sleep Monitor";
+			sourceTree = "<group>";
+		};
+		1F5098E52EB1E85C00888491 /* Mac Sleep MonitorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mac Sleep MonitorTests";
+			sourceTree = "<group>";
+		};
+		1F5098EF2EB1E85C00888491 /* Mac Sleep MonitorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mac Sleep MonitorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F5098D12EB1E85B00888491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098DF2EB1E85C00888491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098E92EB1E85C00888491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F5098CB2EB1E85B00888491 = {
+			isa = PBXGroup;
+			children = (
+				1F8CDBF42EB23F4100923C2F /* Localizable.strings */,
+				1F5098D62EB1E85B00888491 /* Mac Sleep Monitor */,
+				1F5098E52EB1E85C00888491 /* Mac Sleep MonitorTests */,
+				1F5098EF2EB1E85C00888491 /* Mac Sleep MonitorUITests */,
+				1F5098D52EB1E85B00888491 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F5098D52EB1E85B00888491 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F5098D42EB1E85B00888491 /* Mac Sleep Monitor.app */,
+				1F5098E22EB1E85C00888491 /* Mac Sleep MonitorTests.xctest */,
+				1F5098EC2EB1E85C00888491 /* Mac Sleep MonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F5098D32EB1E85B00888491 /* Mac Sleep Monitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5098F62EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep Monitor" */;
+			buildPhases = (
+				1F5098D02EB1E85B00888491 /* Sources */,
+				1F5098D12EB1E85B00888491 /* Frameworks */,
+				1F5098D22EB1E85B00888491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1F5098D62EB1E85B00888491 /* Mac Sleep Monitor */,
+			);
+			name = "Mac Sleep Monitor";
+			packageProductDependencies = (
+			);
+			productName = "Mac Sleep Monitor";
+			productReference = 1F5098D42EB1E85B00888491 /* Mac Sleep Monitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F5098E12EB1E85C00888491 /* Mac Sleep MonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5098F92EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep MonitorTests" */;
+			buildPhases = (
+				1F5098DE2EB1E85C00888491 /* Sources */,
+				1F5098DF2EB1E85C00888491 /* Frameworks */,
+				1F5098E02EB1E85C00888491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F5098E42EB1E85C00888491 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1F5098E52EB1E85C00888491 /* Mac Sleep MonitorTests */,
+			);
+			name = "Mac Sleep MonitorTests";
+			packageProductDependencies = (
+			);
+			productName = "Mac Sleep MonitorTests";
+			productReference = 1F5098E22EB1E85C00888491 /* Mac Sleep MonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F5098EB2EB1E85C00888491 /* Mac Sleep MonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F5098FC2EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep MonitorUITests" */;
+			buildPhases = (
+				1F5098E82EB1E85C00888491 /* Sources */,
+				1F5098E92EB1E85C00888491 /* Frameworks */,
+				1F5098EA2EB1E85C00888491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F5098EE2EB1E85C00888491 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1F5098EF2EB1E85C00888491 /* Mac Sleep MonitorUITests */,
+			);
+			name = "Mac Sleep MonitorUITests";
+			packageProductDependencies = (
+			);
+			productName = "Mac Sleep MonitorUITests";
+			productReference = 1F5098EC2EB1E85C00888491 /* Mac Sleep MonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F5098CC2EB1E85B00888491 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					1F5098D32EB1E85B00888491 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					1F5098E12EB1E85C00888491 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1F5098D32EB1E85B00888491;
+					};
+					1F5098EB2EB1E85C00888491 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 1F5098D32EB1E85B00888491;
+					};
+				};
+			};
+			buildConfigurationList = 1F5098CF2EB1E85B00888491 /* Build configuration list for PBXProject "Mac Sleep Monitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F5098CB2EB1E85B00888491;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1F5098D52EB1E85B00888491 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F5098D32EB1E85B00888491 /* Mac Sleep Monitor */,
+				1F5098E12EB1E85C00888491 /* Mac Sleep MonitorTests */,
+				1F5098EB2EB1E85C00888491 /* Mac Sleep MonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F5098D22EB1E85B00888491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F8CDBF62EB23F4100923C2F /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098E02EB1E85C00888491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098EA2EB1E85C00888491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F5098D02EB1E85B00888491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098DE2EB1E85C00888491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F5098E82EB1E85C00888491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F5098E42EB1E85C00888491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F5098D32EB1E85B00888491 /* Mac Sleep Monitor */;
+			targetProxy = 1F5098E32EB1E85C00888491 /* PBXContainerItemProxy */;
+		};
+		1F5098EE2EB1E85C00888491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F5098D32EB1E85B00888491 /* Mac Sleep Monitor */;
+			targetProxy = 1F5098ED2EB1E85C00888491 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F8CDBF42EB23F4100923C2F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8CDBF52EB23F4100923C2F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F5098F42EB1E85C00888491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F5098F52EB1E85C00888491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		1F5098F72EB1E85C00888491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mac Sleep Monitor/MacSleepMonitor.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mac Sleep Monitor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-Monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1F5098F82EB1E85C00888491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mac Sleep Monitor/MacSleepMonitor.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mac Sleep Monitor";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-Monitor";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1F5098FA2EB1E85C00888491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-MonitorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Sleep Monitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mac Sleep Monitor";
+			};
+			name = Debug;
+		};
+		1F5098FB2EB1E85C00888491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-MonitorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mac Sleep Monitor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mac Sleep Monitor";
+			};
+			name = Release;
+		};
+		1F5098FD2EB1E85C00888491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-MonitorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Mac Sleep Monitor";
+			};
+			name = Debug;
+		};
+		1F5098FE2EB1E85C00888491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.Sleep-MonitorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Mac Sleep Monitor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F5098CF2EB1E85B00888491 /* Build configuration list for PBXProject "Mac Sleep Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5098F42EB1E85C00888491 /* Debug */,
+				1F5098F52EB1E85C00888491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5098F62EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep Monitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5098F72EB1E85C00888491 /* Debug */,
+				1F5098F82EB1E85C00888491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5098F92EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep MonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5098FA2EB1E85C00888491 /* Debug */,
+				1F5098FB2EB1E85C00888491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F5098FC2EB1E85C00888491 /* Build configuration list for PBXNativeTarget "Mac Sleep MonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F5098FD2EB1E85C00888491 /* Debug */,
+				1F5098FE2EB1E85C00888491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F5098CC2EB1E85B00888491 /* Project object */;
+}

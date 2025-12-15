@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install SwiftFormat
+      run: brew install swiftformat
+      
+    - name: Install SwiftLint
+      run: brew install swiftlint
+      
+    - name: Run SwiftFormat
+      run: swiftformat --lint .
+      
+    - name: Run SwiftLint
+      run: swiftlint lint --strict
+
+  build:
+    runs-on: macos-latest
+    needs: lint
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode.app
+      
+    - name: Build
+      run: |
+        xcodebuild clean build \
+          -project "Mac Sleep Monitor.xcodeproj" \
+          -scheme "Mac Sleep Monitor" \
+          -destination 'platform=macOS' \
+          -configuration Debug
