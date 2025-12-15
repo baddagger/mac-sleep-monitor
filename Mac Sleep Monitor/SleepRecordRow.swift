@@ -1,26 +1,26 @@
 import SwiftUI
 
 // MARK: - SleepRecordRow
+
 /// Single sleep record row with details
 struct SleepRecordRow: View {
     let record: SleepRecord
     let isSelected: Bool
     let onTap: () -> Void
-    
+
     private var timeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
         return formatter
     }
-    
+
     var body: some View {
-        let _ = print("record: \(record.id), selected: \(isSelected)")
         Button(action: onTap) {
             HStack {
                 Image(systemName: isSelected ? "moon.fill" : "moon")
                     .foregroundColor(isSelected ? .blue : .gray)
                     .font(.system(size: 16))
-                
+
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
                         Text("label.sleep_time")
@@ -29,15 +29,15 @@ struct SleepRecordRow: View {
                         Text(timeFormatter.string(from: record.startTime))
                             .font(.subheadline)
                             .fontWeight(isSelected ? .semibold : .medium)
-                        
+
                         Text("→")
                             .foregroundColor(.secondary)
-                        
+
                         Text(timeFormatter.string(from: record.endTime))
                             .font(.subheadline)
                             .fontWeight(isSelected ? .semibold : .medium)
                     }
-                    
+
                     HStack {
                         Text("label.duration")
                             .font(.caption)
@@ -48,9 +48,9 @@ struct SleepRecordRow: View {
                             .foregroundColor(isSelected ? .blue : .primary)
                     }
                 }
-                
+
                 Spacer()
-                
+
                 Text(record.reason)
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -64,7 +64,7 @@ struct SleepRecordRow: View {
             .cornerRadius(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 1.5)
+                    .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 1.5),
             )
         }
         .buttonStyle(.plain)

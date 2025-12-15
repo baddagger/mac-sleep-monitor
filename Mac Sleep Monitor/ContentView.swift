@@ -1,6 +1,7 @@
 import SwiftUI
 
 // MARK: - ContentView
+
 /// Main view displaying sleep records with filtering options
 struct ContentView: View {
     @State private var records: [SleepRecord] = []
@@ -8,7 +9,7 @@ struct ContentView: View {
     @State private var selectedDays = 7
     @State var selectedRecord: SleepRecord?
     @State private var expandedSections: Set<Date> = []
-    
+
     var body: some View {
         VStack(spacing: 0) {
             // Top toolbar
@@ -21,9 +22,9 @@ struct ContentView: View {
                 }
                 .pickerStyle(.segmented)
                 .frame(width: 270)
-                
+
                 Spacer()
-                
+
                 Button(action: loadLogs) {
                     Label("button.refresh", systemImage: "arrow.clockwise")
                 }
@@ -31,9 +32,9 @@ struct ContentView: View {
             }
             .padding()
             .background(Color(NSColor.controlBackgroundColor))
-            
+
             Divider()
-            
+
             if isLoading {
                 VStack {
                     Spacer()
@@ -65,8 +66,9 @@ struct ContentView: View {
                                         records: records,
                                         selectedRecordID: selectedRecord?.id,
                                         onSelect: { record in
-                                            selectedRecord = selectedRecord?.id == record.id ? nil : record
-                                        }
+                                            selectedRecord = selectedRecord?.id == record
+                                                .id ? nil : record
+                                        },
                                     )
                                     .padding(.top, 8)
                                 }
@@ -84,7 +86,7 @@ struct ContentView: View {
                                                 expandedSections.insert(day)
                                             }
                                         }
-                                    }
+                                    },
                                 )
                                 .id(day) // anchor for scrolling
                             }
@@ -100,14 +102,14 @@ struct ContentView: View {
             loadLogs()
         }
     }
-    
+
     private var recordsByDay: [Date: [SleepRecord]] {
         let calendar = Calendar.current
         return Dictionary(grouping: records) { record in
             calendar.startOfDay(for: record.startTime)
         }
     }
-    
+
     private func loadLogs() {
         isLoading = true
         Task {

@@ -1,7 +1,6 @@
 import XCTest
 
 final class Sleep_MonitorUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
